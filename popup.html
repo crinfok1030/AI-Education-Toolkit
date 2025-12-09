@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IELTS Writing Toolkit</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>IELTS Writing Toolkit</h1>
+      <p class="subtitle">Your Offline Exam Companion</p>
+    </header>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="timer">Timer</button>
+      <button class="tab-btn" data-tab="word-counter">Word Count</button>
+      <button class="tab-btn" data-tab="checklist">Checklist</button>
+    </div>
+
+    <div class="tab-content active" id="timer">
+      <div class="timer-display">
+        <span id="minutes">40</span>:<span id="seconds">00</span>
+      </div>
+      <div class="timer-controls">
+        <button id="start-btn" class="primary-btn">Start</button>
+        <button id="reset-btn" class="secondary-btn">Reset</button>
+      </div>
+      <div class="timer-presets">
+        <button class="preset-btn" data-time="20">Task 1 (20m)</button>
+        <button class="preset-btn active-preset" data-time="40">Task 2 (40m)</button>
+      </div>
+      <button id="pin-timer-btn" class="pin-btn">
+        ⏱️ Pop-up Timer
+      </button>
+    </div>
+
+    <div class="tab-content" id="word-counter">
+      <div class="word-counter-header">
+        <label for="task-select">Task Type:</label>
+        <select id="task-select" class="task-select">
+          <option value="1">Task 1 (Min: 150 words)</option>
+          <option value="2" selected>Task 2 (Min: 250 words)</option>
+        </select>
+      </div>
+
+      <textarea id="essay-input" class="essay-input" placeholder="Paste or type your essay here..."></textarea>
+
+      <div class="word-count-display">
+        <div class="count-number">
+          <span id="word-count">0</span> words
+        </div>
+        <div class="count-status warning" id="count-status">
+          <span class="status-icon">⚠️</span>
+          <span id="status-text">Need 250 more words</span>
+        </div>
+      </div>
+
+      <button id="clear-text-btn" class="clear-btn">Clear Text</button>
+    </div>
+
+    <div class="tab-content" id="checklist">
+      <div class="checklist-group">
+        <h3>Task 1 Criteria</h3>
+        <label><input type="checkbox"> Paraphrase the question</label>
+        <label><input type="checkbox"> Overview of main trends</label>
+        <label><input type="checkbox"> Data to support features</label>
+        <label><input type="checkbox"> No personal opinion</label>
+      </div>
+      <div class="checklist-group">
+        <h3>Task 2 Criteria</h3>
+        <label><input type="checkbox"> Clear position (Thesis)</label>
+        <label><input type="checkbox"> Topic sentences per paragraph</label>
+        <label><input type="checkbox"> Supporting arguments/examples</label>
+        <label><input type="checkbox"> Clear conclusion</label>
+      </div>
+    </div>
+
+    <footer>
+      <a href="https://ieltswriting.ai/?utm_source=chrome_extension&utm_medium=extension_popup" target="_blank"
+        class="cta-button">
+        <span>Get AI Essay Feedback</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+          <polyline points="15 3 21 3 21 9"></polyline>
+          <line x1="10" y1="14" x2="21" y2="3"></line>
+        </svg>
+      </a>
+      <p class="footer-note">Powered by <a href="https://ieltswriting.ai/" target="_blank">IELTSwriting.ai</a></p>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+
+</html>

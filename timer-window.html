@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS Timer</title>
+    <link rel="stylesheet" href="timer-window.css">
+</head>
+
+<body>
+    <div class="pinned-container">
+        <div class="header">
+            <h1>📝 IELTS Timer</h1>
+            <button id="close-btn" class="close-btn" title="Close">×</button>
+        </div>
+
+        <div class="timer-display">
+            <span id="minutes">40</span>:<span id="seconds">00</span>
+        </div>
+
+        <div class="timer-info">
+            <span id="task-label">Task 2</span>
+        </div>
+
+        <div class="timer-controls">
+            <button id="start-btn" class="control-btn primary">▶ Start</button>
+            <button id="reset-btn" class="control-btn secondary">↻ Reset</button>
+        </div>
+
+        <div class="timer-presets">
+            <button class="preset-btn" data-time="20">Task 1 (20m)</button>
+            <button class="preset-btn active-preset" data-time="40">Task 2 (40m)</button>
+        </div>
+    </div>
+    <script src="timer-window.js"></script>
+</body>
+
+</html>
