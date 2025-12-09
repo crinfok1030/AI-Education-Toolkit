@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DET Practice Tools</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>📚 DET Practice Tools</h1>
+            <div class="exam-date-section">
+                <label>DET Exam Date:</label>
+                <div class="date-picker-wrapper">
+                    <button id="date-picker-btn" class="date-picker-btn" title="Click to set exam date">📅</button>
+                    <input type="date" id="exam-date-input" style="display: none;">
+                </div>
+                <div id="exam-countdown" class="countdown">
+                    <span id="countdown-text">Click the calendar to set your exam date</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Flashcard Section -->
+        <section class="flashcard-section">
+            <div class="flashcard-header">
+                <h2>📖 Today's Commonly used vocabulary in the DET</h2>
+                <span id="progress-indicator">1/50</span>
+            </div>
+
+            <div class="flashcard" id="flashcard">
+                <div class="flashcard-content">
+                    <div class="word" id="word">prolific</div>
+                </div>
+                <div class="flashcard-actions">
+                    <button class="define-btn" id="define-btn">🔍 Define in English</button>
+                    <button class="mastered-btn" id="mastered-btn">✓ Mastered</button>
+                </div>
+            </div>
+
+            <div class="flashcard-controls">
+                <button id="prev-btn" class="nav-btn">← Previous</button>
+                <button id="next-btn" class="nav-btn">Next →</button>
+            </div>
+        </section>
+
+        <!-- Motivational Quote -->
+        <div class="quote" id="quote">
+            "125+ score? It starts with today's practice!"
+        </div>
+
+        <!-- DET Score Toolkit -->
+        <section class="score-toolkit">
+            <h3>📊 DET Score Toolkit</h3>
+
+            <!-- DET Score Calculator -->
+            <div class="toolkit-section">
+                <h4>🧮 DET Score Calculator</h4>
+                <div class="calculator-grid">
+                    <div class="score-input-group">
+                        <label for="listening-score">Listening:</label>
+                        <input type="number" id="listening-score" min="0" max="160" step="5" placeholder="0-160">
+                    </div>
+                    <div class="score-input-group">
+                        <label for="speaking-score">Speaking:</label>
+                        <input type="number" id="speaking-score" min="0" max="160" step="5" placeholder="0-160">
+                    </div>
+                    <div class="score-input-group">
+                        <label for="reading-score">Reading:</label>
+                        <input type="number" id="reading-score" min="0" max="160" step="5" placeholder="0-160">
+                    </div>
+                    <div class="score-input-group">
+                        <label for="writing-score">Writing:</label>
+                        <input type="number" id="writing-score" min="0" max="160" step="5" placeholder="0-160">
+                    </div>
+                </div>
+                <div class="calculated-results">
+                    <div class="overall-score">Overall Score: <span id="overall-score">-</span></div>
+                    <div class="subscores-grid">
+                        <div>Production: <span id="production-score">-</span></div>
+                        <div>Literacy: <span id="literacy-score">-</span></div>
+                        <div>Comprehension: <span id="comprehension-score">-</span></div>
+                        <div>Conversation: <span id="conversation-score">-</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DET Score Converter -->
+            <div class="toolkit-section">
+                <h4>🔄 DET Score Converter</h4>
+                <div class="converter-input">
+                    <label for="det-score">DET Score:</label>
+                    <input type="number" id="det-score" min="10" max="160" step="5" placeholder="Enter score (0-160)">
+                </div>
+                <div class="conversion-results" id="conversion-results">
+                    <div>≈ TOEFL iBT: <span id="toefl-score">-</span></div>
+                    <div>≈ IELTS: <span id="ielts-score">-</span></div>
+                    <div>≈ CEFR: <span id="cefr-level">-</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Links & Timer -->
+        <section class="actions">
+            <div class="quick-links">
+                <h3>🎯 Quick Links</h3>
+                <a href="https://www.detpractice.com/app" target="_blank" class="action-btn">📝 Practice Now</a>
+                <a href="https://www.detpractice.com/duolingo-english-test-coupon" target="_blank" class="action-btn">🎁
+                    Get Free DET Discount Coupon</a>
+            </div>
+
+            <div class="timer-section">
+                <h3>⏱️ Study Timer</h3>
+                <div id="timer-display">25:00</div>
+                <div class="timer-controls">
+                    <select id="timer-duration">
+                        <option value="15">15 min</option>
+                        <option value="25" selected>25 min</option>
+                        <option value="30">30 min</option>
+                        <option value="45">45 min</option>
+                        <option value="60">60 min</option>
+                    </select>
+                    <button id="timer-btn" class="action-btn">Start</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            Powered by <a href="https://www.detpractice.com" target="_blank">DET Practice</a> | Duolingo English Test
+            Official Partner © <span id="current-year">2025</span>
+        </footer>
+    </div>
+
+    <script src="vocab-data.js"></script>
+    <script src="score-conversion.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
